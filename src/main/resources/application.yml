@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    streams:
+      bootstrap.servers: locahost:9092
+      properties[default.key.serde]: org.apache.kafka.common.serialization.Serdes$StringSerde
+      properties[default.value.serde]: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+      properties[schema.registry.url]: http://localhost:8081
+      application-id: football-scoring-app
+
+server:
+  port: 8090

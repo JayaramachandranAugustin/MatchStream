@@ -1,0 +1,78 @@
+{
+  "name": "PlayerMatchStats",
+  "namespace": "com.whizpath.matchstream.generated",
+  "doc": "Player Match statistics",
+  "type": "record",
+  "fields": [
+    {
+      "name": "playerId",
+      "type": {
+        "type": "string",
+        "doc": "Unique player identifier"
+      }
+    },
+    {
+      "name": "playerName",
+      "type": {
+        "type": "string",
+        "doc": "Player name"
+      }
+    },
+    {
+      "name": "goalCount",
+      "type": {
+        "type": "int",
+        "doc": "player goal count"
+      }
+    },
+    {
+      "name": "assistCount",
+      "type": {
+        "type": "int",
+        "doc": "player assist count"
+      }
+    },
+    {
+      "name": "keypass",
+      "type": {
+        "type": "int",
+        "doc": "player keypass"
+      }
+    },
+    {
+      "name": "dribble",
+      "type": {
+        "type": "int",
+        "doc": "player dribble"
+      }
+    },
+    {
+      "name": "tackle",
+      "type": {
+        "type": "int",
+        "doc": "player tackle"
+      }
+    },
+    {
+      "name": "matchId",
+      "type": {
+        "type": "string",
+        "doc": "Match Id"
+      }
+    },
+    {
+      "name": "teamName",
+      "type": {
+        "type": "string",
+        "doc": "Team Name"
+      }
+    },
+    {
+      "name": "playedMinutes",
+      "type": {
+        "type": "double",
+        "doc": "Played Minutes"
+      }
+    }
+  ]
+}

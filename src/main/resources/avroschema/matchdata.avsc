@@ -1,0 +1,129 @@
+{
+  "name": "MatchScore",
+  "namespace": "com.whizpath.matchstream.generated",
+  "doc": "Match Value",
+  "type": "record",
+  "fields": [
+    {
+      "name": "matchId",
+      "type": {
+        "type": "string",
+        "doc": "Unique match id for each match"
+      }
+    },
+    {
+      "name": "matchType",
+      "type": {
+        "type": "enum",
+        "symbols": ["INTERNATIONAL_FRIENDLY","INTERNATIONAL", "CLUB_FRIENDLY","CLUB"],
+        "name": "MatchType"
+      }
+    },
+    {
+      "name": "matchAttendance",
+      "type": {
+        "type": "long",
+        "doc": "match attendance"
+      }
+    },
+    {
+      "name": "groundName",
+      "type": {
+        "type": "string",
+        "doc": "ground name"
+      }
+    },
+    {
+      "name": "venueCity",
+      "type": {
+        "type": "string",
+        "doc": "ground state"
+      }
+    },
+    {
+      "name": "venueState",
+      "type": {
+        "type": "string",
+        "doc": "ground state"
+      }
+    },
+    {
+      "name": "venueCountry",
+      "type": {
+        "type": "string",
+        "doc": "Ground country"
+      }
+    },
+    {
+      "name": "matchDateTime",
+      "type": {
+        "type": "string",
+        "doc": "Match date and time in UTC"
+      }
+    },
+    {
+      "name": "result",
+      "type": {
+        "type": "string",
+        "doc": "Winner country name, DRAW if the match ended in draw, other possible values Cancelled, no result"
+      }
+    },
+    {
+      "name": "firstHalfExtraTime",
+      "type": {
+        "type": "int",
+        "doc": "Stoppage time given in first half"
+      }
+    },
+    {
+      "name": "secondHalfExtraTime",
+      "type": {
+        "type": "int",
+        "doc": "Stoppage time given in second half"
+      }
+    },
+    {
+      "name":"Teams",
+      "type":{
+        "type": "array",
+        "items":{
+          "name":"Team",
+          "type":"record",
+          "fields":[
+            {"name":"teamName", "type":"string"},
+            {"name":"teamId", "type":"string"},
+            {"name":"teamGoal", "type":"int"},
+            {"name":"isHome", "type":"boolean"},
+            {"name":"yellowCardCount", "type":"int"},
+            {"name":"redCardCount", "type":"int"}
+          ]
+        }
+      }
+    },
+    {
+      "name":"Players",
+      "type":{
+        "type": "array",
+        "items":{
+          "name":"Player",
+          "type":"record",
+          "fields":[
+            {"name":"playerName", "type":"string"},
+            {"name":"playerId", "type":"string"},
+            {"name":"goalCount", "type":"int"},
+            {"name":"assistCount", "type":"int"},
+            {"name":"keypass", "type":"int"},
+            {"name":"dribble", "type":"int"},
+            {"name":"tackle", "type":"int"},
+            {"name":"teamName", "type":"string"},
+            {"default": null, "name":"inTime", "type":["null","string"]},
+            {"default": null, "name":"outTime", "type":["null","string"]},
+            {"default": null, "name":"yellowCardTime", "type":["null","string"]},
+            {"default": null, "name":"secondYellowCardTime", "type":["null","string"]},
+            {"default": null, "name":"redCardTime", "type":["null","string"]}
+          ]
+        }
+      }
+    }
+  ]
+}
